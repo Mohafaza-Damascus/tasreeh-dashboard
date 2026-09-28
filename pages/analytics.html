@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#064239" />
+    <meta
+      name="description"
+      content="لوحة إحصاءات منصة تصريح — تحليل تصاريح النقل والأنقاض والحفر وموزعي مواد البناء ودخول دمشق القديمة."
+    />
+    <title>لوحة إحصاءات تصريح</title>
+    <link rel="stylesheet" href="../css/analytics.css" />
+    <script src="../js/api.js" defer></script>
+    <script src="../js/charts.js" defer></script>
+    <script src="../js/analytics.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../index.html">
+          <img class="brand-logo" src="../assets/images/damascus-governorate.png" alt="شعار محافظة دمشق" />
+          <span class="brand-text">
+            <strong>منصة تصريح</strong>
+            <small>لوحة تحكم للسيد المحافظ</small>
+          </span>
+        </a>
+      </div>
+      <nav class="tabs-wrap" aria-label="نوع التصريح">
+        <div class="tabs" role="tablist" data-tabs>
+          <button
+            type="button"
+            role="tab"
+            class="tab"
+            id="tab-transport"
+            aria-controls="main"
+            aria-selected="true"
+            data-type="transport"
+          >
+            <span class="tab-text"><strong>نقل مواد ومعدات بناء</strong></span>
+          </button>
+          <button
+            type="button"
+            role="tab"
+            class="tab"
+            id="tab-rubble"
+            aria-controls="main"
+            aria-selected="false"
+            tabindex="-1"
+            data-type="rubble"
+          >
+            <span class="tab-text"><strong>نقل الأنقاض</strong></span>
+          </button>
+          <button
+            type="button"
+            role="tab"
+            class="tab"
+            id="tab-excavation"
+            aria-controls="main"
+            aria-selected="false"
+            tabindex="-1"
+            data-type="excavation"
+          >
+            <span class="tab-text"><strong>الحفر</strong></span>
+          </button>
+          <button
+            type="button"
+            role="tab"
+            class="tab"
+            id="tab-distributor"
+            aria-controls="main"
+            aria-selected="false"
+            tabindex="-1"
+            data-type="distributor"
+          >
+            <span class="tab-text"><strong>موزع مواد بناء</strong></span>
+          </button>
+          <button
+            type="button"
+            role="tab"
+            class="tab"
+            id="tab-vehicle_enter"
+            aria-controls="main"
+            aria-selected="false"
+            tabindex="-1"
+            data-type="vehicle_enter"
+          >
+            <span class="tab-text"><strong>دخول دمشق القديمة</strong></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="filters" aria-label="فلاتر البيانات">
+      <div class="filters-inner">
+        <div class="filters-row">
+          <div class="seg seg-range" role="group" aria-label="الفترة الزمنية" data-range>
+            <button type="button" data-range-val="7">7 أيام</button>
+            <button type="button" data-range-val="30">30 يوماً</button>
+            <button type="button" data-range-val="90">90 يوماً</button>
+            <button type="button" data-range-val="ytd">هذا العام</button>
+            <button type="button" data-range-val="all">الكل</button>
+            <button type="button" data-range-val="custom">مخصّص</button>
+          </div>
+          <div class="custom-range" data-custom-range hidden>
+            <label><span>من</span><input type="date" data-date-from /></label>
+            <label><span>إلى</span><input type="date" data-date-to /></label>
+          </div>
+          <div class="filters-main" data-filters-main></div>
+          <button type="button" class="btn btn-link" data-reset>مسح الكل</button>
+        </div>
+      </div>
+    </section>
+
+    <main id="main" class="page" role="tabpanel" aria-labelledby="tab-transport">
+      <div class="error-banner" role="alert" data-error hidden>
+        <strong>تعذّر تحميل البيانات.</strong>
+        <span data-error-text></span>
+        <button type="button" class="btn btn-ghost btn-sm" data-retry>إعادة المحاولة</button>
+      </div>
+      <section class="kpis" aria-label="المؤشرات الرئيسية" data-kpis></section>
+      <div class="grid" data-grid></div>
+    </main>
+
+    <div class="loading" data-loading><span></span></div>
+  </body>
+</html>

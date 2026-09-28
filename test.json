@@ -1,0 +1,35 @@
+[
+  {
+    "type": "transport",
+    "status": "done",
+    "submitted_at": "2026-09-15T08:12:11+03:00",
+    "processing_time": 8874,
+    "license_type": "building",
+    "origin": "mazzeh",
+    "destination": "jobar"
+  },
+  {
+    "type": "rubble",
+    "status": "rejected",
+    "submitted_at": "2026-09-21T17:45:00+03:00",
+    "processing_time": 51300,
+    "landfill": "landfill_3"
+  },
+  {
+    "type": "excavation",
+    "status": "progress",
+    "submitted_at": "2026-09-26T08:30:00+03:00",
+    "processing_time": null,
+    "excavation_applicant": "water_company"
+  },
+  {
+    "type": "distributor",
+    "status": "done",
+    "submitted_at": "2026-09-24T07:20:00+03:00",
+    "processing_time": 13500,
+    "license_type": "renovation",
+    "origin": "qudsaya",
+    "destination": "mazzeh",
+    "materials": ["cement", "iron"]
+  }
+]

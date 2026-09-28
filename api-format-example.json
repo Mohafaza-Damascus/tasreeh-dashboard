@@ -1,0 +1,32 @@
+[
+  {
+    "type": "transport",
+    "status": "done",
+    "submitted_at": "2026-09-15T08:12:11+03:00",
+    "license_type": "building"
+  },
+  {
+    "type": "rubble",
+    "status": "rejected",
+    "submitted_at": "2026-09-21T17:45:00+03:00",
+    "landfill": "landfill_3"
+  },
+  {
+    "type": "excavation",
+    "status": "progress",
+    "submitted_at": "2026-09-26T08:30:00+03:00",
+    "excavation_applicant": "water_company"
+  },
+  {
+    "type": "distributor",
+    "status": "done",
+    "submitted_at": "2026-09-24T07:20:00+03:00",
+    "materials": ["cement", "iron"]
+  },
+  {
+    "type": "vehicle_enter",
+    "status": "done",
+    "submitted_at": "2026-09-25T09:40:00+03:00",
+    "entry_type": "commercial"
+  }
+]
